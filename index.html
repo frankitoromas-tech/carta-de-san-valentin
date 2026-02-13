@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Luyuromo - San Valentín</title>
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Vinculamos el archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ========================================
+         PANTALLA 1: PREGUNTA
+         ======================================== -->
+    <div id="questionScreen" class="screen active gradient-bg question-screen">
+        <!-- Decoraciones flotantes de fondo -->
+        <div class="floating-decor float-1" style="top: 10%; left: 10%;">💕</div>
+        <div class="floating-decor float-2" style="top: 20%; right: 20%;">💝</div>
+        <div class="floating-decor float-3" style="bottom: 20%; left: 20%;">💖</div>
+        <div class="floating-decor float-1" style="bottom: 10%; right: 10%;">💗</div>
+
+        <!-- Contenedor principal de la pregunta -->
+        <div class="question-container">
+            <!-- Emoji grande animado -->
+            <div class="main-emoji">💝</div>
+            
+            <!-- Títulos -->
+            <h1 class="main-title">Luyuromo,</h1>
+            <h1 class="main-question">¿Quieres ser mi<br>San Valentín?</h1>
+            
+            <!-- Mensaje de advertencia (aparece cuando intentan decir "No") -->
+            <div id="warningMessage" class="warning-message"></div>
+            
+            <!-- Botones interactivos -->
+            <div class="buttons-container">
+                <button id="btnYes" class="btn btn-yes">¡SÍ! 💕</button>
+                <button id="btnNo" class="btn btn-no">No</button>
+            </div>
+            
+            <!-- Pista (aparece después de varios intentos) -->
+            <div id="hint" class="hint" style="display: none;">
+                Pista: El botón "SÍ" está creciendo... 👀
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         PANTALLA 2: CARTA (oculta inicialmente)
+         ======================================== -->
+    <div id="cardScreen" class="screen gradient-bg card-screen" style="display: none;">
+        <!-- Decoraciones flotantes -->
+        <div class="floating-decor float-1" style="top: 10%; left: 10%; font-size: 5rem;">💕</div>
+        <div class="floating-decor float-2" style="top: 20%; right: 20%; font-size: 4rem;">💝</div>
+        <div class="floating-decor float-3" style="bottom: 20%; left: 20%; font-size: 4.5rem;">💖</div>
+        <div class="floating-decor float-1" style="bottom: 10%; right: 10%; font-size: 3.5rem;">💗</div>
+        <div class="floating-decor float-2" style="top: 50%; left: 25%; font-size: 4rem;">✨</div>
+        <div class="floating-decor float-3" style="top: 33%; right: 25%; font-size: 3.5rem;">🌟</div>
+
+        <!-- Encabezado de la carta -->
+        <div class="card-header">
+            <div class="card-emoji">💝</div>
+            <h1 class="card-title">Luyuromo</h1>
+            <p class="card-subtitle">Carta de San Valentín</p>
+        </div>
+
+        <!-- Contenido principal de la carta -->
+        <div class="card-content">
+            <!-- Mensaje de amor (cambia con el botón) -->
+            <p id="messageText" class="message-text">
+                Estar contigo me inspira: cambia sus palabras para recordarte lo valiosa que eres para mí.
+            </p>
+
+            <!-- Botones de acción -->
+            <div class="action-buttons">
+                <button id="btnNewMessage" class="action-btn">
+                    Nuevo mensaje ✨
+                </button>
+                <button id="btnRoses" class="action-btn">
+                    Revivir rosas 🌹
+                </button>
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        <div class="card-footer">
+            <p class="footer-title">¡Sabía que dirías que sí! 💕</p>
+            <p class="footer-text">Este San Valentín será inolvidable</p>
+        </div>
+    </div>
+
+    <!-- Vinculamos el archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
