@@ -1,3 +1,4 @@
+
 /* ========================================
    ESTILOS GENERALES
    ======================================== */
@@ -58,6 +59,34 @@ body {
 @keyframes float-3 {
     0%, 100% { transform: translateY(0) rotate(0deg); }
     50% { transform: translateY(-25px) rotate(5deg); }
+}
+
+/* ========================================
+   IMÁGENES EN PANTALLA DE PREGUNTA
+   ======================================== */
+.images-section {
+    display: flex;
+    justify-content: center;        /* Centra horizontalmente */
+    align-items: center;            /* Centra verticalmente */
+    margin: 0 auto 2rem auto;       /* Centra el contenedor */
+    width: 100%;
+}
+
+.foto-decorativa {
+    width: 80px;                    /* Mucho más pequeñas */
+    height: 80px;
+    object-fit: cover;              /* Mantiene proporción */
+    border-radius: 10px;            /* Esquinas redondeadas */
+    border: 2px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    animation: fade-in 1s ease-out;
+    display: block;                 /* Asegura que sea bloque */
+}
+
+.foto-decorativa:hover {
+    transform: scale(1.08);         /* Crece un poco al pasar el mouse */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 /* ========================================
@@ -171,6 +200,7 @@ body {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 /* ========================================
    FOTO ÚNICA EN PANTALLA DE CARTA
    ======================================== */
@@ -184,12 +214,12 @@ body {
 }
 
 .foto-unica {
-    width: 80px;   /* Prueba con 60px o 70px */
-    height: 80px;
+    width: 120px;                   /* Mucho más pequeña */
+    height: 120px;
     object-fit: cover;              /* Mantiene proporción */
-    border-radius: 15px;
-    border: 3px solid rgba(244, 63, 94, 0.4);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 2px solid rgba(244, 63, 94, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     animation: scale-in 0.8s ease-out;
     display: block;                 /* Asegura que sea bloque */
@@ -200,6 +230,7 @@ body {
     box-shadow: 0 15px 35px rgba(244, 63, 94, 0.4);
     border-color: rgba(244, 63, 94, 0.6);
 }
+
 /* ========================================
    PANTALLA DE CARTA
    ======================================== */
@@ -360,20 +391,20 @@ body {
     }
     
     .foto-unica {
-        width: 180px;               /* Más pequeño en móvil */
-        height: 180px;
+        width: 100px;               /* Más pequeño en móvil */
+        height: 100px;
     }
 }
 
 /* Para pantallas muy pequeñas */
 @media (max-width: 480px) {
     .foto-decorativa {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
     }
     
     .foto-unica {
-        width: 150px;
-        height: 150px;
+        width: 90px;
+        height: 90px;
     }
 }
