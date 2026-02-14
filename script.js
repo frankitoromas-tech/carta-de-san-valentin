@@ -341,3 +341,6 @@ console.log('Botón SÍ:', btnYes);
 console.log('Botón NO:', btnNo);
 console.log('Pantalla pregunta:', questionScreen);
 console.log('Pantalla carta:', cardScreen);
+const musicIntro = document.getElementById("musicIntro");
+const musicFinal = document.getElementById("musicFinal");
+
