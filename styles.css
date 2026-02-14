@@ -184,8 +184,8 @@ body {
 }
 
 .foto-unica {
-    width: 200px;                   /* Más pequeña */
-    height: 200px;
+    width: 80px;   /* Prueba con 60px o 70px */
+    height: 80px;
     object-fit: cover;              /* Mantiene proporción */
     border-radius: 15px;
     border: 3px solid rgba(244, 63, 94, 0.4);
