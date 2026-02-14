@@ -171,7 +171,35 @@ body {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* ========================================
+   FOTO ÚNICA EN PANTALLA DE CARTA
+   ======================================== */
+.foto-unica-contenedor {
+    display: flex;
+    justify-content: center;        /* Centra horizontalmente */
+    align-items: center;            /* Centra verticalmente */
+    margin: 2rem auto;              /* Centra el contenedor */
+    width: 100%;
+    padding: 0 1rem;                /* Espacio en los lados */
+}
 
+.foto-unica {
+    width: 200px;                   /* Más pequeña */
+    height: 200px;
+    object-fit: cover;              /* Mantiene proporción */
+    border-radius: 15px;
+    border: 3px solid rgba(244, 63, 94, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    animation: scale-in 0.8s ease-out;
+    display: block;                 /* Asegura que sea bloque */
+}
+
+.foto-unica:hover {
+    transform: scale(1.08);         /* Crece ligeramente */
+    box-shadow: 0 15px 35px rgba(244, 63, 94, 0.4);
+    border-color: rgba(244, 63, 94, 0.6);
+}
 /* ========================================
    PANTALLA DE CARTA
    ======================================== */
@@ -324,4 +352,28 @@ body {
     .card-title { font-size: 3rem; }
     .main-emoji { font-size: 5rem; }
     .card-emoji { font-size: 4rem; }
+    
+    /* Ajustes de fotos en móvil */
+    .foto-decorativa {
+        width: 250px;               /* Tamaño más pequeño en móvil */
+        height: 250px;
+    }
+    
+    .foto-unica {
+        width: 180px;               /* Más pequeño en móvil */
+        height: 180px;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .foto-decorativa {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .foto-unica {
+        width: 150px;
+        height: 150px;
+    }
 }
