@@ -1,4 +1,3 @@
-
 /* ========================================
    ESTILOS GENERALES
    ======================================== */
@@ -66,28 +65,68 @@ body {
    ======================================== */
 .images-section {
     display: flex;
-    justify-content: center;        /* Centra horizontalmente */
-    align-items: center;            /* Centra verticalmente */
-    margin: 0 auto 2rem auto;       /* Centra el contenedor */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 2rem auto;
     width: 100%;
 }
 
+/* OPCIÓN 1: FONDO TRANSPARENTE */
 .foto-decorativa {
-    width: 80px;                    /* Mucho más pequeñas */
-    height: 80px;
-    object-fit: cover;              /* Mantiene proporción */
-    border-radius: 10px;            /* Esquinas redondeadas */
-    border: 2px solid white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
     animation: fade-in 1s ease-out;
-    display: block;                 /* Asegura que sea bloque */
+    display: block;
+    opacity: 0.7;                    /* Transparencia general */
+    filter: brightness(1.1);         /* Un poco más brillante */
 }
 
 .foto-decorativa:hover {
-    transform: scale(1.08);         /* Crece un poco al pasar el mouse */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    opacity: 1;                      /* Se vuelve opaca al pasar el mouse */
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
+
+/* OPCIÓN 2: MARCO ESPECIAL - Para activar esta opción, comenta la OPCIÓN 1 y descomenta esta:
+.foto-decorativa {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0;
+    padding: 15px;
+    background: white;
+    box-shadow: 
+        0 0 0 8px rgba(255, 255, 255, 0.5),
+        0 0 0 16px rgba(255, 192, 203, 0.3),
+        0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: fade-in 1s ease-out;
+    display: block;
+    position: relative;
+}
+
+.foto-decorativa::before {
+    content: '💕';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+.foto-decorativa:hover {
+    transform: rotate(5deg) scale(1.05);
+    box-shadow: 
+        0 0 0 8px rgba(255, 255, 255, 0.8),
+        0 0 0 16px rgba(255, 192, 203, 0.5),
+        0 20px 50px rgba(0, 0, 0, 0.4);
+}
+*/
 
 /* ========================================
    PANTALLA DE PREGUNTA
@@ -206,30 +245,85 @@ body {
    ======================================== */
 .foto-unica-contenedor {
     display: flex;
-    justify-content: center;        /* Centra horizontalmente */
-    align-items: center;            /* Centra verticalmente */
-    margin: 2rem auto;              /* Centra el contenedor */
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
     width: 100%;
-    padding: 0 1rem;                /* Espacio en los lados */
+    padding: 0 1rem;
 }
 
+/* OPCIÓN 1: FONDO TRANSPARENTE */
 .foto-unica {
-    width: 120px;                   /* Mucho más pequeña */
-    height: 120px;
-    object-fit: cover;              /* Mantiene proporción */
-    border-radius: 10px;
-    border: 2px solid rgba(244, 63, 94, 0.4);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid rgba(244, 63, 94, 0.4);
+    box-shadow: 0 15px 35px rgba(244, 63, 94, 0.3);
     transition: all 0.3s ease;
     animation: scale-in 0.8s ease-out;
-    display: block;                 /* Asegura que sea bloque */
+    display: block;
+    opacity: 0.75;                   /* Transparencia general */
+    filter: brightness(1.1) saturate(1.1);
 }
 
 .foto-unica:hover {
-    transform: scale(1.08);         /* Crece ligeramente */
-    box-shadow: 0 15px 35px rgba(244, 63, 94, 0.4);
-    border-color: rgba(244, 63, 94, 0.6);
+    opacity: 1;                      /* Opaca al pasar el mouse */
+    transform: scale(1.1);
+    box-shadow: 0 20px 50px rgba(244, 63, 94, 0.5);
+    border-color: rgba(244, 63, 94, 0.7);
 }
+
+/* OPCIÓN 2: MARCO ESPECIAL CON DECORACIÓN - Para activar esta opción, comenta la OPCIÓN 1 y descomenta esta:
+.foto-unica {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff 0%, #ffe4e6 100%);
+    box-shadow: 
+        inset 0 0 0 2px #f43f5e,
+        inset 0 0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 0 15px rgba(244, 63, 94, 0.2),
+        0 20px 50px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: scale-in 0.8s ease-out;
+    display: block;
+    position: relative;
+}
+
+.foto-unica::before {
+    content: '💝';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+.foto-unica::after {
+    content: 'Con amor 💕';
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Pacifico', cursive;
+    font-size: 1rem;
+    color: #f43f5e;
+    white-space: nowrap;
+}
+
+.foto-unica:hover {
+    transform: rotate(-2deg) scale(1.05);
+    box-shadow: 
+        inset 0 0 0 2px #f43f5e,
+        inset 0 0 0 10px rgba(255, 255, 255, 1),
+        0 0 0 15px rgba(244, 63, 94, 0.4),
+        0 25px 60px rgba(0, 0, 0, 0.4);
+}
+*/
 
 /* ========================================
    PANTALLA DE CARTA
