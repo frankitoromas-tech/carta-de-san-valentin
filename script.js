@@ -29,7 +29,7 @@ const messages = [
     "¿No estás segura?",
     "Piénsalo mejor...",
     "¿De verdad?",
-    "Dale una oportunidad 💕",
+    "Dame una oportunidad 💕",
     "Vamos, di que sí...",
     "No seas así 🥺",
     "Última oportunidad...",
